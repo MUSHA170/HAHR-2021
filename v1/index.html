@@ -5,18 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <script type="text/javascript" src="scrypt.js"></script>
-
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <!-- CSS only -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <title>SORTE.IO</title>
 
     <script>
-       
+        function guarda_evento(){ //pega o nome do evento e guarda no localstorage
+            obj = document.getElementById("nome_evento");
+            var nome_evento = String(obj.value);
+            localStorage.setItem('nome_evento', nome_evento );
+            }
+
+        function item_atualiza() { //atualiza o href(link) dependendo da escolha
+            document.getElementById("prox").href="itens.html";
+            }
+        function numero_atualiza() {
+                document.getElementById("prox").href="numero.html";
+            }
+
     </script>
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+    <title>SORTE.IO</title>
+
 </head>
 <body>
     <div class="main">        
@@ -33,10 +45,10 @@
                     <h5>Sortear por:</h5>
                 </div>
                 <div style="margin-right:10px" class="btn-group">
-                    <input type="radio" class="btn-check" name="escolha" id="item" autocomplete="off" checked>
+                    <input onclick="item_atualiza()" type="radio" class="btn-check" name="escolha" id="item" autocomplete="off" value="chosed-item">
                     <label class="btn btn-outline-primary" for="item">ITEM</label>
 
-                    <input type="radio" class="btn-check" name="escolha" id="numero" autocomplete="off">
+                    <input onclick="numero_atualiza()" type="radio" class="btn-check" name="escolha" id="numero" autocomplete="off" value="chosed-numero" checked>
                     <label class="btn btn-outline-primary" for="numero">NUMERO</label>
                 </div>
                 
@@ -45,7 +57,7 @@
         <div class="bt-conteiner">
             <div class="botao">
                 <div class="btn_prox">
-                    <button type="button" class="btn  btn-primary btn-lg">Proximo</button>
+                    <a href="numero.html" onclick="guarda_evento()" type="button" class="btn  btn-primary btn-lg" id="prox">Proximo</a>
                 </div>
             </div>
         </div>
