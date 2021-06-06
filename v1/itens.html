@@ -5,76 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <body onload="nome_evento()"></body> <!-- aciona a função quando recarrega a pagina -->
-
     <script>
-        function nome_evento(){// pega do localstorage o nome do evento
-            nomeevento = localStorage.nome_evento
-            
-            document.getElementById("nomeevento").innerHTML = nomeevento;//coloca do html
+      function nome_evento(){// pega do localstorage o nome do evento
+        nomeevento = localStorage.nome_evento
+        
+        document.getElementById("nomeevento").innerHTML = nomeevento;//coloca do html
         }
-
-
-
-        function addItem() {
-            var ul = document.getElementById("dynamic-list");
-            var candidate = document.getElementById("candidate");
-
-            var li = document.createElement("li");
-            
-            li.setAttribute('id', candidate.value);
-            li.appendChild(document.createTextNode(candidate.value));
-            ul.appendChild(li);
-            
-           
-
-        }
-        function removeItem() {
-            var ul = document.getElementById("dynamic-list");
-            var candidate = document.getElementById("candidate");
-            var item = document.getElementById(candidate.value);
-            ul.removeChild(item);
-        }
-
-
     </script>
-    
+
     <title>Sorteio por Itens</title>
 </head>
 <body>
-    <h1>itens</h1>
-    <div>
-        <h4>====nome do evento=====</h4>
-        <h2 id="nomeevento">ada</h2>
-        <button id="bt"></button>
-    </div>
-
-
-
-    <div class="container">
-        <div class="row">
-          <div class="col-12">
-    
-    
-            <div class="input-group">
-              <input type="text" class="form-control" id="candidate" required>
-              <div class="input-group-append">
-                <button onclick="addItem()" class="btn btn-add" type="button">Add Item</button>
-                <button onclick="removeItem()" class="btn btn-remove" type="button">Remove Item</button>
-              </div>
-            </div>
-    
-    <!-- ------------------------------------ -->
-            <ul id="dynamic-list">
-    
-    
-            </ul>
-    
-          </div>
-        </div>
+  <div class="container"> 
+      <h1>itens</h1>
+      <div class="header">
+          <h4>====nome do evento=====</h4>
+          <h2 id="nomeevento"></h2>
       </div>
 
+      <div class="add">
+          <input type="text" id="add_input" placeholder="Add item aqui">
+          <button id="add_btn" onclick="add()">add</button>
+          <button id="add_btn" onclick="excluir()">excluir</button>
+          <button onclick="teste()">teste</button>  
+      </div>
+
+      <div class="box_lista">
+        <ul id="lista">
+
+        </ul>
+      </div>
+      <button onclick="sortear()">Sortear</button>
 
 
 
+      <script src="scrypt.js"></script>
+  </div>
 </body>
 </html>
