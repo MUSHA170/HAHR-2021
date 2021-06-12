@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="presente.css" rel="stylesheet">
+    <body onload="nome_ganha()"></body>
+    <script>
+      function nome_ganha(){// pega do localstorage o nome do evento
+        ganha = localStorage.Ganhador;
+        
+        document.getElementById("ganha").innerHTML = ganha;//coloca do html
+        
+        }
+
+
+    </script>
+     <!-- Bootstrap JavaScript Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+     <!-- Bootstrap CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+    <style>
+      .w{
+        position: fixed;
+        width: 100vw;
+        background-color: black;
+        height: 1px;
+        top: 50vh;
+      }
+
+      .h{
+        position: fixed;
+        height: 100vh;
+        width: 1px;
+        background-color: black;
+        left: 50%;
+      }
+    </style>
+
+</head>
+<body>
+    <div class="w"></div>
+    <div class="h"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-15">
+          <h3 class="text-center text-secondary my-5"><strong>O GANHADOR É</strong></h3>
+        </div>
+        <div class="col mt-5 d-flex justify-content-center">
+          <div class="box">
+            <div class="box-body">
+              <h1 class="img" id="ganha" style="text-align-last: center;"></h1>
+              
+              <div class="box-lid">
+                
+                <div class="box-bowtie"></div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</body>
+</html>

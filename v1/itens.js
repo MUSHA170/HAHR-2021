@@ -36,4 +36,5 @@ function sortear() {
     var resul = li_sorteado.textContent;
 
    localStorage.setItem('Ganhador',resul);
+   window.open('resultado.html', '_blank');
 }
