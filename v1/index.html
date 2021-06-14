@@ -36,20 +36,20 @@
         <div class="nome_evento">
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">Nome do evento</span>
-                <input type="text" class="form-control" placeholder="Ex: Sorteio Aniversario"  id="nome_evento">
+                <input type="text" class="form-control" placeholder="Exemplo: Sorteio Chá Rifa"  id="nome_evento">
             </div>
         </div>
         <div class="bt-conteiner">
             <div class="botao" >
                 <div style="margin-right:10px;">
-                    <h5>Sortear por:</h5>
+                    <h4>Sortear por:</h4>
                 </div>
                 <div style="margin-right:10px" class="btn-group">
                     <input onclick="item_atualiza()" type="radio" class="btn-check" name="escolha" id="item" autocomplete="off" value="chosed-item">
-                    <label class="btn btn-outline-primary" for="item">ITEM</label>
-
+                    <button class="botao1">Item</button>
+                    &nbsp;
                     <input onclick="numero_atualiza()" type="radio" class="btn-check" name="escolha" id="numero" autocomplete="off" value="chosed-numero" checked>
-                    <label class="btn btn-outline-primary" for="numero">NUMERO</label>
+                    <button class="botao1">Número</button>
                 </div>
                 
             </div>
@@ -57,11 +57,13 @@
         <div class="bt-conteiner">
             <div class="botao">
                 <div class="btn_prox">
-                    <a href="numero.html" onclick="guarda_evento()" type="button" class="btn  btn-primary btn-lg" id="prox">Proximo</a>
+                    <a href="numero.html" onclick="guarda_evento()" type="button" id="prox"><button class="botaoprox">Próximo</button></a>
+                    
                 </div>
             </div>
         </div>
     </div>
+    
 
 </body>
 </html>
