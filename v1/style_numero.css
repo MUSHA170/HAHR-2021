@@ -1,7 +1,7 @@
 .main{
     width: 100vw;
     height: 100vh;
-    background-color: rgba(255, 255, 255);
+    background-color: #830492;
 
 }
 
@@ -10,34 +10,38 @@
     src: url(font/MadeynSans-Bold.ttf);
 }
 
-.title{
-    position: relative;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-    font-family: 'MadeyneSans';
-    font-size: 160px;
-        background: linear-gradient(to right,
-           rgb(69, 187, 255) 20%,
-           rgb(245, 80, 190) 20%,
-           rgb(250, 236, 41) 20%,
-           rgb(69, 187, 255) 20%,
-           rgb(245, 80, 190) 20%,
-           rgb(250, 236, 41) 20%,
-           rgb(69, 187, 255) 20%,
-           rgb(245, 80, 190) 80%
-           
-         );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+.titulo{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        font-family: 'MadeyneSans';
+        font-size: 9vw;
+        color:#FF2C97;
+        background-color: white;
+        
 }
+
 .nome_evento{
     background-color: rgba(255, 255, 255, 0.623);
     display: flex;
     justify-content: center;
     padding: 0 30%;
     margin-top: 20vh;
+}
+.caixa{
+    background-color: #FF2C97;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width: 700px;
+    border-radius: 30px;
+}
+.sortear-por{
+    color: yellow;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 .bt-conteiner{
