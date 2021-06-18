@@ -1,7 +1,7 @@
 .main{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(221, 218, 218);
 
 }
 
@@ -11,13 +11,12 @@
 }
 
 .title{
-    position: relative;
     width: auto;
     display: flex;
     justify-content: center;
     padding-top: 20px;
     font-family: 'MadeyneSans';
-    font-size: 160px;
+    font-size: 9vw;
         background: linear-gradient(to right,
            rgb(69, 187, 255) 20%,
            rgb(245, 80, 190) 20%,
@@ -34,7 +33,7 @@
       
 }
 .nome_evento{
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
     display: flex;
     justify-content: center;
     padding: 0 30%;
@@ -42,13 +41,13 @@
 }
 
 .bt-conteiner{
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
     display: flex;
     justify-content: center;
 }
 
 .botao{
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
     width: 30vw;
     display: flex;
     justify-content: center;
@@ -71,7 +70,10 @@
  }
  .botao1:hover {
          transform: scale(1.05);
+         
     }
+
+
     
    
 .botaoprox {

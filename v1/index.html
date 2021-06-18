@@ -9,9 +9,15 @@
     <script>
         function guarda_evento(){ //pega o nome do evento e guarda no localstorage
             obj = document.getElementById("nome_evento");
-            var nome_evento = String(obj.value);
-            localStorage.setItem('nome_evento', nome_evento );
-            }
+            if(obj.value == ""){
+                bt = document.getElementById("prox").href= "";
+            
+                alert("Informe o nome do evento");
+            }else{
+                var nome_evento = String(obj.value);
+                localStorage.setItem('nome_evento', nome_evento );
+            } 
+        }
 
         function item_atualiza() { //atualiza o href(link) dependendo da escolha
             document.getElementById("prox").href="itens.html";
@@ -42,28 +48,31 @@
         <div class="bt-conteiner">
             <div class="botao" >
                 <div style="margin-right:10px;">
-                    <h4>Sortear por:</h4>
+                    <h4 style="color: rgba(red, green, blue, alpha);">Sortear por:</h4>
                 </div>
-                <div style="margin-right:10px" class="btn-group">
-                    <input onclick="item_atualiza()" type="radio" class="btn-check-in" name="escolha" id="item" autocomplete="off" value="chosed-item">
-                    <label class="botao1" for="item">Item</label>
-                    &nbsp;
-                    <input onclick="numero_atualiza()" type="radio" class="btn-check-in" name="escolha" id="numero" autocomplete="off" value="chosed-numero" checked>
-                    <label class="botao1" for="numero">Número</label>
+                <div style="margin-right:10px" class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input onclick="item_atualiza()" type="radio" class="btn-check" name="escolha" id="item" autocomplete="off" value="chosed-item">
+                    <label class="btn btn-outline-primary" for="item">ITEM</label>
+  
+                    <input onclick="numero_atualiza()" type="radio" class="btn-check" name="escolha" id="numero" autocomplete="off" value="chosed-numero" checked>
+                    <label class="btn btn-outline-primary" for="numero">NUMERO</label>
                 </div>
                 
+
             </div>
         </div>
         <div class="bt-conteiner">
             <div class="botao">
                 <div class="btn_prox">
-                    <a href="numero.html" onclick="guarda_evento()" type="button" id="prox"><button class="botaoprox">Próximo</button></a>
+                    <a  onclick="guarda_evento()" href="numero.html" type="button" id="prox">
+                        <button class="btn btn-outline-primary ">Próximo <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/></svg>
+                        </button>
+                    </a>
                     
                 </div>
             </div>
         </div>
     </div>
     
-
 </body>
 </html>

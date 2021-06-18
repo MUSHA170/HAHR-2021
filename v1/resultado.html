@@ -38,14 +38,56 @@
         background-color: black;
         left: 50%;
       }
+
     </style>
+
+    <script>
+      function fetti_lateral() {
+
+      var end = Date.now() + (15 * 100);
+
+      // go Buckeyes!
+      var colors = ["#26ccff","#a25afd","#ff5e7e","#88ff5a","#fcff42","#ffa62d","#ff36ff"];
+
+      (function frame() {         //y
+        confetti({//esquerda    //|.(x = 0, y = 0)    (x = 1, y = 0).
+            particleCount: 7,   //|                 .(x = 0.5, y = 0.5)
+            angle: 55,         //|.(x = 0, y = 1)    (x = 1, y = 1 ).          
+            spread: 55,         //|---------x
+            origin: { x: 0 , y:1 },   //
+            colors: colors      //      90
+        });                     //      |  
+        confetti({//direita     //360<-- -->180  
+            particleCount: 7,   //      |
+            angle: 125,         //     270
+            spread: 55,
+            origin: { x: 1 , y: 1},
+            colors: colors
+        });
+
+        confetti({  
+            particleCount: 7,   
+            angle: 200,         
+            spread: 360,
+            origin: { x: 0.5 , y: 0.5},
+            colors: colors,
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+      }());
+      } 
+      </script>
 
 </head>
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
     <div class="w"></div>
     <div class="h"></div>
-
-    <div class="container">
+  
+    <div class="all" onclick="fetti_lateral()">
       <div class="row">
         <div class="col-15">
           <h3 class="text-center text-secondary my-5"><strong>O GANHADOR É</strong></h3>
@@ -65,6 +107,7 @@
         </div>
       </div>
     </div>
+ 
   
 </body>
 </html>
