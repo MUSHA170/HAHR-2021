@@ -30,16 +30,7 @@
             }
 
         }
-        
-        function checar() {
-            var x = localStorage.getItem('Ganhador');
-            if (isNaN(x)) {
-                console.log('ERRO == nao sorteado eRRO=='+x);
-            } else {
-                console.log('OK == ganhador=='+x);
-            }
-            
-        }
+
     </script>
 
     <title>Sorteio por números</title>
@@ -50,29 +41,25 @@
     <div class="main">    
         <!--cabeçalho-->     
         <div class="titulo">SORTE.IO</div>
-        
 
-            <!--caixa-->
-            <div class= "caixa">
-                <div class="sortear-por">
-                    Sortear número entre <input type="number" min="0" id="n1" placeholder="Número mínimo"> e <input type="number" min="1" id="n2" placeholder="Número máximo">
-                </div>
-            <div class= "numero">
-            
+        <div class="caixa"> 
+            <div class="nomeevento centro">
+                <h1 id="nomeevento"> </h1>
             </div>
-           </div>
-    
-    <div>
-        <label for="">====nome do evento=====</label>
-        <h2 id="nomeevento">ada</h2>
-    </div>
-    <div class="caontainer">
-        
-        <div>
-            <button onclick="sortear()">Sortear</button>
-            <button onclick="checar()">checar</button>
+            
+            <div class="sortear-por centro">
+                <div>Sortear numero entre</div>
+                <div>
+                    <input class="inp" name="min" type="number" min="0" id="n1" placeholder="Número mínimo">
+                    e 
+                    <input class="inp" name="max" type="number" min="1" id="n2" placeholder="Número máximo">
+                </div>
+            </div>
+            
+            <div class="bt-container centro">                
+                <button class="bn29"onclick="sortear()">Sortear</button>                                  
+            </div>
         </div>
     </div>
-</div>
 </body>
 </html>

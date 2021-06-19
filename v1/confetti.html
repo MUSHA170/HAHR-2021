@@ -108,10 +108,24 @@ var colors = ['#bb0000', '#ffffff'];
         </div> 
          <p></p>
         <div class="button">
-            <button onclick="confetti({particleCount: 100, spread: 360, origin: { y: 0.4 }});">CONFETTI</button>
+            <button onclick="fetti_lateral(), confetti({particleCount: 100, spread: 360, origin: { y: 0.4 }});">CONFETTI</button>
             <button onclick="fetti_lateral()">CONFETTI LATERAl</button>
-            <button onclick="confetti.toggle()">clica</button>
+            <button onmouseover="fetti()">clica</button>
+        </div>
+        <div onmouseenter="fetti()"  style="background-color: blue; height: 250px; width: 250px;">
+            clicl for sound
+            <audio id="som" src="partyblower.mp3" >som</audio>
         </div>
     </div>
+    <script>
+        function fetti() {
+            var audio = new Audio('partyblower.mp3');
+            audio.play();
+            var audio2 = new Audio('kids.mp3');
+            audio2.play();
+            
+    } 
+        
+    </script>
 </body>
 </html>

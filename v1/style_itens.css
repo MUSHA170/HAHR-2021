@@ -1,13 +1,13 @@
 body{
     margin: 0px;
+    
 }
-
 .main{
     background-color: rgb(221, 218, 218);
     width: 100%;
     min-height: 100vh;
     height: 100%;
-
+    padding-bottom: 100px;
 }
 
 @font-face {
@@ -21,6 +21,7 @@ body{
 .centro{
     display: flex;
     justify-content: center;
+    font-family: 'Pop';
 }
 
 .titulo{
@@ -51,48 +52,37 @@ body{
 .nomeevento{
     background-color: rgba(79, 118, 128, 0.39);
     border-radius: 30px 30px 0 0;
-    font-family: 'Pop';
+    
 }
 .caixa{
     background-color: #6b6b6b4b;
-    margin: auto; 
+    margin: auto ;
     width: 60vw;
     border-radius: 30px;
     padding-bottom: 20px;
 }
-.sortear-por{
-    /* color: yellow; */
-    font-family: 'Arial';
-    font-size: 30px;
-    padding-top: 20px;
-    padding-left: 20px;
-    
-}
+
+
 @media screen and (max-width: 1030px) {
-    .sortear-por{
-        flex-direction: column;
-        align-items: center;
-    }
+
     .caixa{
         width: 90vw;
         padding-bottom: 20px;
     }
 } 
-    
-@media screen and (max-width: 374px) {
-  .sortear-por{
-      font: 1.5em;
-  }
-  .inp{
-      width: 110px;
-  }
-}
 
-.bt-container{
-    margin-top: 50px;
-    
+.box_lista{
+    margin: 10px;
 }
-
+  
+li{
+    background-color: #afa2a2;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    font-family: 'MadeyneSans';
+}
 
 
 /* input */
@@ -102,9 +92,10 @@ input{
     border: none;
     border-bottom: 2px solid red;
     border-radius: 4px;
-    width: 115px;
+    width: 200px;
     outline: 0;
     text-align: center;
+
 }
 input:focus{
     border-radius: 4px;
@@ -113,7 +104,12 @@ input:focus{
 }
 /* input */
 
-
+.bt{
+    margin: 5px;
+}
+.bt-container{
+    margin-top: 50px;
+}
 /* design do botão */
 .bn29 {
     border: none;

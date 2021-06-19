@@ -5,41 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <body onload="nome_evento()"></body> <!-- aciona a função quando recarrega a pagina -->
+    <link href="style_itens.css" rel="stylesheet">
     <script>
       function nome_evento(){// pega do localstorage o nome do evento
         nomeevento = localStorage.nome_evento
         
         document.getElementById("nomeevento").innerHTML = nomeevento;//coloca do html
         }
-    </script>
+    </script>      
 
+     <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+ 
     <title>Sorteio por Itens</title>
 </head>
 <body>
-  <div class="container"> 
-      <h1>itens</h1>
-      <div class="header">
-          <h4>====nome do evento=====</h4>
-          <h2 id="nomeevento"></h2>
+  <div class="main"> 
+      <div class="titulo">SORTE.IO</div>
+
+    <div class="caixa">
+          <div class="nomeevento centro">
+            <h1 ><strong id="nomeevento"></strong> </h1>
+          </div>
+
+          <div class="top centro">
+              <input type="text" id="add_input" placeholder="Add item aqui">
+              <button id="add_btn" onclick="add()" class="bt btn btn-primary">add</button>
+              <button id="add_btn" onclick="excluir()" class="bt btn btn-primary">excluir</button>
+          </div>
+
+          <div class="box_lista">
+            <ol id="lista">
+              
+            </ol>
+          </div>
+
+          <div class="bt-container centro">                
+            <button class="bn29"onclick="sortear()">Sortear</button>                                  
+          </div>
       </div>
-
-      <div class="add">
-          <input type="text" id="add_input" placeholder="Add item aqui">
-          <button id="add_btn" onclick="add()">add</button>
-          <button id="add_btn" onclick="excluir()">excluir</button>
-          <button onclick="teste()">teste</button>  
-      </div>
-
-      <div class="box_lista">
-        <ul id="lista">
-
-        </ul>
-      </div>
-      <button onclick="sortear()">Sortear</button>
-
-
-
-      <script src="itens.js"></script>
+      
   </div>
+    <script src="itens.js"></script>
 </body>
 </html>
