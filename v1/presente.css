@@ -5,13 +5,22 @@
   z-index: 100;
 }
 
+
+
+.all{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(41, 41, 41);
+}
+
 .box {
   position: relative;
 }
 .box::before {
   content: "";
-  width: 440px;
-  height: 440px;
+  width: 400px;
+  height: 400px;
   background-color: #89cff0;
   position: absolute;
   z-index: -1;
