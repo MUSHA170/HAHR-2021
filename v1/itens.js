@@ -20,21 +20,19 @@ function add() {
 
 }
 
-
 function excluir() {
     var item = document.getElementById(add_input.value);
-    lista.removeChild(item);
+    lista.removeChild(item);//remove item
 }
 
-
-
-
 function sortear() {
-    var tamanho_da_lista = document.getElementsByTagName("li").length;
-    var numer_aleatorio = Math.floor(Math.random() * ( tamanho_da_lista - 0)  + 0);
-    var li_sorteado = document.getElementsByTagName("li")[numer_aleatorio];
-    var resul = li_sorteado.textContent;
+    var tamanho_da_lista = document.getElementsByTagName("li").length;//pega quant de linhas
+    var numer_aleatorio = Math.floor(Math.random() * ( tamanho_da_lista - 0)  + 0);//pega numero aleatorio
+    var li_sorteado = document.getElementsByTagName("li")[numer_aleatorio];//pega a linha na lista referente ao numero aleatorio
+    resul = li_sorteado.textContent;//pega o texto de dentro
 
-   localStorage.setItem('Ganhador',resul);
-   window.open('resultado.html', '_blank');
+    
+
+   localStorage.setItem('Ganhador',resul);//coloca no localstorage
+   window.open('resultado.html', '_blank');//abre a pagina com oresultado
 }

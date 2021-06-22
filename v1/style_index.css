@@ -26,20 +26,9 @@
            rgb(250, 236, 41) 20%,
            rgb(69, 187, 255) 20%,
            rgb(245, 80, 190) 80%
-           
-         );
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-    
-}
-
-.caixa{
-    background-color: #FF2C97;
-    margin-left: auto;
-    margin-right: auto;
-    height: 300px;
-    width: 700px;
-    border-radius: 30px;
 }
 
 .nome_evento{
@@ -63,38 +52,4 @@
     justify-content: center;
     padding: 10px;
     
-}
-
-
-.botao1 {
-    color: #FFF;
-    background-color: rgb(245, 80, 190);
-    border: none;
-    height: 40px;
-    line-height: 30px;
-    padding: 0 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    
- }
- .botao1:hover {
-         transform: scale(1.05);
-         
-    }
-
-
-    
-   
-.botaoprox {
-    color: #FFF;
-    background-color: rgb(69, 187, 255);
-    border: none;
-    height: 60px;
-    line-height: 30px;
-    padding: 0 20px;
-    border-radius: 45%;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
 }

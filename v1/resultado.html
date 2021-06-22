@@ -10,7 +10,7 @@
     <script>
       function script(){// pega do localstorage o nome do evento
         ganhador = localStorage.Ganhador;
-        evento_nome = localStorage.evento_nome;
+        evento_nome = localStorage.nome_evento;
 
         document.getElementById("nomeevento").innerHTML = evento_nome;
         document.getElementById("ganha").innerHTML = ganhador;//coloca do html
@@ -75,7 +75,6 @@
 </head>
 <body>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-
     <div class="all" >
       <div class="row">
         <div class="col-15">
