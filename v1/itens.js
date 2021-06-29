@@ -1,6 +1,7 @@
 var add_input = document.getElementById("add_input");
 var lista = document.getElementById("lista");
 
+
 function add() {
     var elem = add_input.value;
     console.log(elem);
